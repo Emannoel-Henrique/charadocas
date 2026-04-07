@@ -42,7 +42,7 @@ def root():
     return jsonify({
         "api":"charadas",
         "version":"1.0",
-        "Author": "Emannoel"
+        "Author": "Tio João"
     }), 200
 
 # =======================================
