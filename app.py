@@ -7,10 +7,16 @@ from flask_cors import CORS
 import os
 from dotenv import load_dotenv
 import json
+from flasgger import Swagger
 
 load_dotenv()  # Carrega as variáveis de ambiente do arquivo .env
 
 app = Flask(__name__)
+app.config['SWAGGER'] = {
+    'openapi': '3.0.3'
+    }
+# Chamar o openapi do flasgger
+swagger = Swagger(app, template_file='openapi.yaml')
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")  # Carrega a chave secreta do .env
 CORS(app, origins="*")  # Permitir CORS para todas as origens
 
@@ -36,7 +42,7 @@ def root():
     return jsonify({
         "api":"charadas",
         "version":"1.0",
-        "Author": "Tio João"
+        "Author": "Emannoel"
     }), 200
 
 # =======================================
