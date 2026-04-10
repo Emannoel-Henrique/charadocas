@@ -12,7 +12,7 @@ info:
 servers:
   - url: http://localhost:5000
     description: Servidor local de desenvolvimento
-  - url: https://sua-api-no-vercel.vercel.app
+  - url: https://charadocas-lu4rsut84-emannoels-projects-5d591d54.vercel.app/
     description: Servidor de produção (Vercel)
 
 components:
